@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=   , initial-scale=1.0">
+    <title>Document</title>
+    <!--重設CSS-->
+    <link rel="stylesheet" href="reset.css">
+    <!--css-->
+    <link rel="stylesheet" href="header-footer.css">
+    <link rel="stylesheet" href="shop.css">
+    <!--Fontawesome ICON-->
+    <script src="https://kit.fontawesome.com/4ce54b2072.js" crossorigin="anonymous"></script>
+    <!--頁籤LOGO-->
+    <link rel="Shortcut Icon" type="image/x-icon" href="./images/icon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        .pic-banner {
+            top: -20px;
+        }
+
+        .category-products .toys {
+            border-bottom: 1px solid #000000cc;
+        }
+
+        img {
+            transition: 1s;
+            border-radius: 25px;
+        }
+
+        .card:hover .pic img {
+            scale: 1.2;
+        }
+
+        .container-quantity button:hover {
+            color: #fff;
+            background-color: #fa0;
+            cursor: pointer;
+        }
+
+        .container-products-pic .card a {
+            text-decoration: none;
+            color: #000000cc;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="menu">
+        <div class="logo">
+            <a href="index.html">
+                <svg width="144" height="68" viewBox="0 0 144 68" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="144" height="68" fill="url(#pattern0_145_3945)" />
+                    <defs>
+                        <pattern id="pattern0_145_3945" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_145_3945"
+                                transform="matrix(0.0046729 0 0 0.00989555 0 -0.0046729)" />
+                        </pattern>
+                        <image id="image0_145_3945" width="214" height="102"
+                            xlink:href="data:image/png;base64,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" />
+                    </defs>
+                </svg>
+            </a>
+
+        </div>
+
+
+        <nav>
+            <a href="about-live.html" class="bone">關於我們</a>
+            <a href="supplies.html" class="bone">產品介紹</a>
+            <a href="contact.html" class="bone">聯絡我們</a>
+            <a href="cart.html" class="bone">購物清單</a>
+
+            <a href="login.html" class="sign">登入</a>
+
+        </nav>
+
+    </header>
+
+
+    <section class="section section-banner">
+        <div class="container container-banner">
+            <div class="banner txt-banner">
+                <div class="txt-banner-en">
+                    <h1>Prod<span>ucts</span>
+                    </h1>
+                </div>
+                <div class="txt-banner-ch">
+                    <h1>商品<span>列表</span>
+                    </h1>
+                </div>
+            </div>
+            <div class="pic-banner">
+                <img src="./images/shopbanner.png" alt="">
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="section section-products">
+        <div class="container container-products">
+            <div class="title-products">
+                <div class="title-product">
+                    <h2>商品類別</h2>
+                </div>
+                <div class="category-products">
+                    <button class="supplies">用品</button>
+                    <button class="toys">玩具</button>
+                    <button class="food">食物</button>
+                </div>
+            </div>
+
+            <div class="container container-products-pic">
+                <div class="card">
+                    <a href="">
+                        <div class="pic">
+                            <img src="./images/商品1圖.png">
+                        </div>
+                        <div class="txt">
+                            <h2>彈道嘎嘎雞</h2>
+                            <p>NT199$</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="">
+                        <div class="pic">
+                            <img src="./images/商品2圖.png">
+                        </div>
+                        <div class="txt">
+                            <h2>育智健身球</h2>
+                            <p>NT109$</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="">
+                        <div class="pic">
+                            <img src="./images/商品3圖.png">
+                        </div>
+                        <div class="txt">
+                            <h2>來根雪茄</h2>
+                            <p>NT145$</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="">
+                        <div class="pic">
+                            <img src="./images/商品4圖.png">
+                        </div>
+                        <div class="txt">
+                            <h2>旺子橙龍</h2>
+                            <p>NT153$</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="">
+                        <div class="pic">
+                            <img src="./images/商品5圖.png">
+                        </div>
+                        <div class="txt">
+                            <h2>藍白拖</h2>
+                            <p>NT200$</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="">
+                        <div class="pic">
+                            <img src="./images/商品6圖.png">
+                        </div>
+                        <div class="txt">
+                            <h2>鱷魚</h2>
+                            <p>NT180$</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="">
+                        <div class="pic">
+                            <img src="./images/商品7圖.png">
+                        </div>
+                        <div class="txt">
+                            <h2>幸福松鼠</h2>
+                            <p>NT279$</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="">
+                        <div class="pic">
+                            <img src="./images/商品8圖.png">
+                        </div>
+                        <div class="txt">
+                            <h2>驢王</h2>
+                            <p>NT279$</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="">
+                        <div class="pic">
+                            <img src="./images/商品9圖.png">
+                        </div>
+                        <div class="txt">
+                            <h2>貓頭鷹球怪</h2>
+                            <p>NT120$</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="container container-quantity">
+                <button><i class="fa-solid fa-angles-left"></i></button>
+                <button><i class="fa-solid fa-angle-left"></i></button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button><i class="fa-solid fa-angle-right"></i></button>
+                <button><i class="fa-solid fa-angles-right"></i></button>
+            </div>
+
+    </section>
+
+
+
+
+
+
+
+    <footer>
+        <section class="section section-footer">
+            <div class="container container-footer">
+                <div class="houseinfo">
+                    <div class="logo-social">
+                        <div class="logo">
+                            <svg width="144" height="68" viewBox="0 0 144 68" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <rect width="144" height="68" fill="url(#pattern0_145_3945)" />
+                                <defs>
+                                    <pattern id="pattern0_145_3945" patternContentUnits="objectBoundingBox" width="1"
+                                        height="1">
+                                        <use xlink:href="#image0_145_3945"
+                                            transform="matrix(0.0046729 0 0 0.00989555 0 -0.0046729)" />
+                                    </pattern>
+                                    <image id="image0_145_3945" width="214" height="102"
+                                        xlink:href="data:image/png;base64,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" />
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="social">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-line"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="contactinfo">
+                        <h3>聯絡資訊</h3>
+                        <ul>
+                            <li>
+                                <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                                <span class="txt">桃園市中壢區復興路46號9樓</span>
+                            </li>
+                            <li>
+                                <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                                <span class="txt">03 425 1108</span>
+                            </li>
+                            <li>
+                                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                                <span class="txt">zug55476@fosiq.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="openhours">
+                        <h3>營業時間</h3>
+                        <ul>
+                            <li>週一至週五 : (9:00am.-6:00pm)</li>
+                            <li>週六&周日 : (10:00am.-5:00pm)</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <div class="section section-copyright">
+            <div class="container container-copyright">
+                <div class="copyright">
+                    <p>Copyright © [2024] [DOGHOUSE]. All rights reserved. </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

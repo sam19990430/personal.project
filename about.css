@@ -1,0 +1,142 @@
+
+.container-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.card-about {
+    width: 800px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin: auto;
+}
+
+.card-about .pic {
+    width: 50%;
+}
+
+.card-about .pic img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.card-about .txt {
+    line-height: 1.8;
+    width: 50%;
+    font-size: 16px;
+}
+
+.card-about .txt h2 {
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card-about .txt p {
+    padding: 10px;
+}
+
+.container-located {
+    width: 1000px;
+    display: flex;
+    /* justify-content: center; */
+    gap: 50px;
+    position: relative;
+
+}
+
+.map {
+    margin-top: 40px;
+    width: 500px;
+    height: 300px;
+}
+
+.map iframe {
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+}
+
+.title-located {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 20px;
+    writing-mode: vertical-lr
+}
+
+.mapinfo {
+    background-color: #f4b960;
+    border-radius: 25px;
+    padding: 25px;
+    width: 500px;
+    height: 300px;
+    /* height: 500px; */
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.mapinfo ul li {
+    margin: 20px 0;
+}
+
+.section-located {
+    margin-bottom: 200px;
+}
+
+.titles-service {
+    font-size: 36px;
+    font-weight: bold;
+
+}
+
+.title-service {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    border-bottom: 1px solid #000000cc;
+
+}
+
+.categoryservice button {
+    border: none;
+    background-color: #fff;
+    font-size: 24px;
+    margin: 20px 30px;
+    width: 100px;
+}
+
+.container-service {
+    width: 900px;
+    text-align: center;
+}
+
+.container-service .card .pic {
+    width: 600px;
+    margin-top: 20px;
+    margin: auto;
+}
+
+.container-service .card .pic img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.container-service .card .txt {
+    padding-top: 30px;
+    margin: auto;
+    width: 600px;
+    line-height: 1.5;
+}
+
+
