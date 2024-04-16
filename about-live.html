@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         .pic-banner {
             top: 0;
@@ -54,11 +54,19 @@
         .categoryservice button:hover {
             cursor: pointer;
         }
+
+        .section-service {
+            padding-top: 0;
+        }
     </style>
 
 </head>
 
 <body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <header class="menu">
         <div class="logo">
@@ -119,7 +127,9 @@
         <div class="container container-about">
             <div class="card-about">
                 <div class="pic">
-                    <img src="./images/about1.png">
+                    <div data-aos="zoom-in-right" data-aos-duration="1000" data-aos-easing="linear">
+                        <img src="./images/about1.png">
+                    </div>
                 </div>
                 <div class="txt">
                     <h2>關於我們</h2>
@@ -134,7 +144,9 @@
                     </p>
                 </div>
                 <div class="pic">
-                    <img src="./images/about2.png">
+                    <div data-aos="zoom-in-left" data-aos-duration="1000" data-aos-easing="linear">
+                        <img src="./images/about2.png">
+                    </div>
                 </div>
 
             </div>
@@ -144,26 +156,29 @@
 
 
     <section class="section section-located">
-        <div class="container container-located">
-            <div class="title-located">
-                <p>地理位置</p>
-            </div>
-            <div class="map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.2491781960202!2d121.22502269999998!3d24.9576355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468223631e2f209%3A0x581275cd0db5d98f!2zMzIw5qGD5Zut5biC5Lit5Z2c5biC5b6p6IiI6LevNDbomZ855qiT!5e0!3m2!1szh-TW!2stw!4v1712503785957!5m2!1szh-TW!2stw"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="mapinfo">
-                <ul>
-                    <li>03 425 1108</li>
-                    <li>桃園市中壢區復興路46號9樓</li>
-                    <li>zug55476@fosiq.com</li>
-                    <li>週一至週五 : 9:00am.-6:00pm</li>
-                    <li>週六至週日 : 10:00am.-5:00pm</li>
-                </ul>
-            </div>
 
+        <div data-aos="zoom-in" data-aos-duration="1500" data-aos-easing="linear">
+            <div class="container container-located">
+                <div class="title-located">
+                    <p>地理位置</p>
+                </div>
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.2491781960202!2d121.22502269999998!3d24.9576355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468223631e2f209%3A0x581275cd0db5d98f!2zMzIw5qGD5Zut5biC5Lit5Z2c5biC5b6p6IiI6LevNDbomZ855qiT!5e0!3m2!1szh-TW!2stw!4v1712503785957!5m2!1szh-TW!2stw"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="mapinfo">
+                    <ul>
+                        <li>03 425 1108</li>
+                        <li>桃園市中壢區復興路46號9樓</li>
+                        <li>zug55476@fosiq.com</li>
+                        <li>週一至週五 : 9:00am.-6:00pm</li>
+                        <li>週六至週日 : 10:00am.-5:00pm</li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -171,43 +186,46 @@
 
 
     <section class="section section-service">
-        <div class="container container-service">
-            <div class="titles-service">
-                <div class="title-service">
-                    <h2>服務</h2>
-                </div>
-                <div class="categoryservice">
-                    <button class="live">住宿</button>
-                    <button class="set">美容</button>
-                    <button class="takecare">安親</button>
-                </div>
-            </div>
-            <div class="card card-default">
-                <div class="pic">
-                    <img src="./images/service1.png">
-                </div>
-                <div class="txt">
-                    <p>我們的美容服務旨在為您的寵物提供最專業和舒適的美容體驗。我們的專業美容師會根據您的寵物的需求和您的要求，提供各種美容服務，包括洗澡、修剪、美容造型等。我們使用高品質的產品和工具，確保您的寵物在接受美容服務時皮膚和毛髮得到最好的護理，同時確保其安全和舒適。我們致力於讓您的寵物看起來更健康、更美麗，讓您放心並對我們的服務感到滿意。
-                    </p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="pic">
-                    <img src="./images/service2.png">
-                </div>
-                <div class="txt">
-                    <p>我們的住宿服務提供安全、舒適的住宿環境，讓您的寵物在您不在的時候也能感受到家的溫暖。我們擁有寬敞舒適的客房和戶外活動區，專業的護理人員全天候照顧您的寵物，確保他們的健康和幸福。無論是短期住宿還是長期寄養，我們都會提供最優質的服務，讓您放心。
-                    </p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="pic">
-                    <img src="./images/service3.png">
-                </div>
-                <div class="txt">
+        <div data-aos="fade-up" data-aos-easing="linear">
 
-                    <p>我們提供安親服務，讓您的寵物在您不在的時候得到充分的照顧和關愛。我們的專業護理人員會全天候照顧您的寵物，包括提供食物、水、散步、玩耍等。我們致力於為您的寵物提供一個安全、舒適和快樂的環境，讓它們感受到家的溫暖，同時讓您放心，無後顧之憂地享受您的時間。
-                    </p>
+            <div class="container container-service">
+                <div class="titles-service">
+                    <div class="title-service">
+                        <h2>服務</h2>
+                    </div>
+                    <div class="categoryservice">
+                        <button class="live">住宿</button>
+                        <button class="set">美容</button>
+                        <button class="takecare">安親</button>
+                    </div>
+                </div>
+                <div class="card card-default">
+                    <div class="pic">
+                        <img src="./images/service2.png">
+                    </div>
+                    <div class="txt">
+                        <p>我們的美容服務旨在為您的寵物提供最專業和舒適的美容體驗。我們的專業美容師會根據您的寵物的需求和您的要求，提供各種美容服務，包括洗澡、修剪、美容造型等。我們使用高品質的產品和工具，確保您的寵物在接受美容服務時皮膚和毛髮得到最好的護理，同時確保其安全和舒適。我們致力於讓您的寵物看起來更健康、更美麗，讓您放心並對我們的服務感到滿意。
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="pic">
+                        <img src="./images/service1.png">
+                    </div>
+                    <div class="txt">
+                        <p>我們的住宿服務提供安全、舒適的住宿環境，讓您的寵物在您不在的時候也能感受到家的溫暖。我們擁有寬敞舒適的客房和戶外活動區，專業的護理人員全天候照顧您的寵物，確保他們的健康和幸福。無論是短期住宿還是長期寄養，我們都會提供最優質的服務，讓您放心。
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="pic">
+                        <img src="./images/service3.png">
+                    </div>
+                    <div class="txt">
+
+                        <p>我們提供安親服務，讓您的寵物在您不在的時候得到充分的照顧和關愛。我們的專業護理人員會全天候照顧您的寵物，包括提供食物、水、散步、玩耍等。我們致力於為您的寵物提供一個安全、舒適和快樂的環境，讓它們感受到家的溫暖，同時讓您放心，無後顧之憂地享受您的時間。
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
