@@ -178,7 +178,7 @@ vertical-align: top;
 
 
 .houseinfo ul li{
-    padding: 16px 0;
+    padding: 6px 0;
 
 }
 
@@ -192,4 +192,8 @@ vertical-align: top;
     padding: 0 4px;
     display: inline-block;
     width: 20px;
+}
+
+.container-copyright {
+    padding: 0;
 }

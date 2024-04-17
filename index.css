@@ -10,6 +10,9 @@ h3 {
     font-size: 20px;
 }
 
+.section-news{
+    padding: 0 30px;
+}
 .section-comfortable .container,
 .section-news .container {
     background-image: url(./images/icon\ _Paw_.png);
@@ -273,4 +276,8 @@ picture {
 
 .txt-bottom {
     width: 400px;
+}
+.choose-why p{
+    font-size: 32px;
+    font-weight: bold;
 }
