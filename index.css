@@ -96,13 +96,17 @@ h3 {
     line-height: 1.8;
     margin: auto;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .title-news h2 {
     font-size: 32px;
     color: #f4b980;
+    margin-bottom: 20px;
 }
-
+.title-service h2{
+    margin-bottom: 20px;
+}
 .title-news p {
     font-size: 16px;
 }
