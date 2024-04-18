@@ -22,22 +22,57 @@
 
 
     <style>
+        /* .pic-banner {
+            width: 600px;
+            top: 100px;
+        } */
+        .radious-right {
+            border-radius: 0 25px 25px 0;
+        }
+
+        .radious-left {
+            border-radius: 25px 0 0 25px;
+        }
+
+        .product-info .quantity {
+            display: inline-block;
+            margin-right: 20px;
+            margin-left: 10px;
+            padding-left: 15px;
+            /* width: 60px; */
+        }
+
+        .section-banner {
+            height: unset;
+        }
+
+        .txt-banner {
+            width: 200px;
+        }
+
+        .section-banner h1 {
+            font-size: 36px;
+        }
+
+        .pic-banner {
+            top: 0;
+            /* transform: translateY(35%); */
+            width: 400px;
+            pointer-events: none;
+        }
+
         .container-cart {
             width: 900px;
         }
 
-        .pic-banner {
-            width: 600px;
-            top: 100px;
-        }
 
         .title {
             width: 800px;
             margin: auto;
-            padding: 0 40px 0 120px;
+            /* padding: 0 40px 0 120px; */
             height: 100px;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             background-color: #fdf1df;
             border: 1px solid #000000cc;
             border-radius: 25px;
@@ -45,10 +80,17 @@
             font-weight: bold;
         }
 
+        .title .product p {
+            display: inline-block;
+            width: 218px;
+            padding-left: 30px;
+        }
+
         .product-info {
+            width: 460px;
             display: flex;
-            justify-content: space-between;
-            gap: 105px;
+            justify-content: space-around;
+            /* gap: 105px; */
         }
 
         .card {
@@ -59,8 +101,8 @@
             justify-content: center;
             background-color: #fdf1df;
             width: 800px;
-            justify-content: space-between;
-            padding: 30px 30px;
+            justify-content: space-around;
+            padding: 30px 0;
             border: 1px solid #000000cc;
             border-radius: 25px;
         }
@@ -73,7 +115,9 @@
 
         .card-price {
             display: flex;
-            gap: 60px;
+            width: 460px;
+            justify-content: space-around;
+            /* gap: 60px; */
             align-items: center;
         }
 
@@ -89,8 +133,9 @@
 
         button {
             border: 1px solid #000000cc;
-            width: 50px;
-            height: 30px;
+            padding: 2px 8px;
+            /* width: 50px; */
+            /* height: 30px; */
             background-color: #fdf1df;
         }
 
@@ -178,9 +223,9 @@
                     <p>商品</p>
                 </div>
                 <div class="product-info">
-                    <p>單價</p>
-                    <p>數量</p>
-                    <p>總計</p>
+                    <p class="price">單價</p>
+                    <p class="quantity">數量</p>
+                    <p>小計</p>
                     <p>操作</p>
 
                 </div>
@@ -197,72 +242,72 @@
                 <div class="card-price">
                     <p>$339</p>
                     <div class="button">
-                        <button>-</button>
+                        <button class="radious-left">-</button>
                         <button>1</button>
-                        <button>+</button>
+                        <button class="radious-right"">+</button>
                     </div>
                     <p>$339</p>
-                    <button class="delete">刪除</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-cart">
-                    <p>太空艙兩用提籃S</p>
-                    <picture>
-                        <img src="./images/太空艙.png" alt="">
-                    </picture>
-                </div>
-
-                <div class="card-price">
-                    <p>$1599</p>
-                    <div class="button">
-                        <button>-</button>
-                        <button>1</button>
-                        <button>+</button>
+                    <button class=" delete"><i class="fa-solid fa-trash"></i></button>
                     </div>
-                    <p>$1599</p>
-                    <button class="delete">刪除</button>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-cart">
-                    <p>成犬羊肉+米(骨骼)</p>
-                    <picture>
-                        <img src="./images/4.png" alt="">
-                    </picture>
-                </div>
-
-                <div class="card-price">
-                    <p>$1899</p>
-                    <div class="button">
-                        <button>-</button>
-                        <button>1</button>
-                        <button>+</button>
+                <div class="card">
+                    <div class="card-cart">
+                        <p>太空艙兩用提籃S</p>
+                        <picture>
+                            <img src="./images/太空艙.png" alt="">
+                        </picture>
                     </div>
-                    <p>$1899</p>
-                    <button class="delete">刪除</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-cart">
-                    <p>鮮緻嫩雞(全齡犬)</p>
-                    <picture>
-                        <img src="./images/8.png" alt="">
-                    </picture>
-                </div>
 
-                <div class="card-price">
-                    <p>$899</p>
-                    <div class="button">
-                        <button>-</button>
-                        <button>1</button>
-                        <button>+</button>
+                    <div class="card-price">
+                        <p>$1599</p>
+                        <div class="button">
+                            <button class="radious-left">-</button>
+                            <button>1</button>
+                            <button class="radious-right">+</button>
+                        </div>
+                        <p>$1599</p>
+                        <button class="delete"><i class="fa-solid fa-trash"></i></button>
                     </div>
-                    <p>$899</p>
-                    <button class="delete">刪除</button>
+                </div>
+                <div class="card">
+                    <div class="card-cart">
+                        <p>成犬羊肉+米(骨骼)</p>
+                        <picture>
+                            <img src="./images/4.png" alt="">
+                        </picture>
+                    </div>
+
+                    <div class="card-price">
+                        <p>$1899</p>
+                        <div class="button">
+                            <button class="radious-left">-</button>
+                            <button>1</button>
+                            <button class="radious-right">+</button>
+                        </div>
+                        <p>$1899</p>
+                        <button class="delete"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-cart">
+                        <p>鮮緻嫩雞(全齡犬)</p>
+                        <picture>
+                            <img src="./images/8.png" alt="">
+                        </picture>
+                    </div>
+
+                    <div class="card-price">
+                        <p>$899</p>
+                        <div class="button">
+                            <button class="radious-left">-</button>
+                            <button>1</button>
+                            <button class="radious-right">+</button>
+                        </div>
+                        <p>$899</p>
+                        <button class="delete"><i class="fa-solid fa-trash"></i></button>
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
 
 
