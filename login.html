@@ -19,8 +19,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
     <style>
+        .section-banner {
+            height: unset;
+        }
+
+        .txt-banner {
+            width: 300px;
+        }
+
+        .section-banner h1 {
+            font-size: 36px;
+        }
+
         .pic-banner {
-            top: 70%;
+            top: 0;
+            transform: translateY(-70%);
+            width: 300px;
+            pointer-events: none;
         }
 
         .pic-banner img {
@@ -209,7 +224,7 @@
                 </div>
             </div>
             <div class="pic-banner">
-                <img src="./images/聯絡banner.png" alt="">
+                <img src="./images/login-banner.png" alt="">
             </div>
         </div>
     </section>
