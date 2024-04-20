@@ -158,6 +158,11 @@
         .delete:hover {
             cursor: pointer;
         }
+
+        #price::before,
+        #total::before {
+            content: "$";
+        }
     </style>
 </head>
 
@@ -231,7 +236,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card" id="card1">
                 <div class="card-cart">
                     <p>口袋毛領背心</p>
                     <picture>
@@ -240,77 +245,109 @@
                 </div>
 
                 <div class="card-price">
-                    <p>$339</p>
+                    <p id="price">339</p>
+                    <div class="button">
+                        <button class="radious-left" id="radious-left1">-</button>
+                        <button id="product1">1</button>
+                        <button class="radious-right" id="radious-right1">+</button>
+                    </div>
+                    <p id="total">339</p>
+                    <button class=" delete" id="delete"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-cart">
+                    <p>太空艙兩用提籃S</p>
+                    <picture>
+                        <img src="./images/太空艙.png" alt="">
+                    </picture>
+                </div>
+
+                <div class="card-price">
+                    <p class="price">$1599</p>
+                    <div class="button">
+                        <button class="radious-left">-</button>
+                        <button class="number">1</button>
+                        <button class="radious-right">+</button>
+                    </div>
+                    <p class="total">$1599</p>
+                    <button class="delete"><i class="fa-solid fa-trash"></i></button>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="card-cart">
+                    <p>成犬羊肉+米(骨骼)</p>
+                    <picture>
+                        <img src="./images/4.png" alt="">
+                    </picture>
+                </div>
+
+                <div class="card-price">
+                    <p>$1899</p>
                     <div class="button">
                         <button class="radious-left">-</button>
                         <button>1</button>
-                        <button class="radious-right"">+</button>
+                        <button class="radious-right">+</button>
                     </div>
-                    <p>$339</p>
-                    <button class=" delete"><i class="fa-solid fa-trash"></i></button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-cart">
-                        <p>太空艙兩用提籃S</p>
-                        <picture>
-                            <img src="./images/太空艙.png" alt="">
-                        </picture>
-                    </div>
-
-                    <div class="card-price">
-                        <p>$1599</p>
-                        <div class="button">
-                            <button class="radious-left">-</button>
-                            <button>1</button>
-                            <button class="radious-right">+</button>
-                        </div>
-                        <p>$1599</p>
-                        <button class="delete"><i class="fa-solid fa-trash"></i></button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-cart">
-                        <p>成犬羊肉+米(骨骼)</p>
-                        <picture>
-                            <img src="./images/4.png" alt="">
-                        </picture>
-                    </div>
-
-                    <div class="card-price">
-                        <p>$1899</p>
-                        <div class="button">
-                            <button class="radious-left">-</button>
-                            <button>1</button>
-                            <button class="radious-right">+</button>
-                        </div>
-                        <p>$1899</p>
-                        <button class="delete"><i class="fa-solid fa-trash"></i></button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-cart">
-                        <p>鮮緻嫩雞(全齡犬)</p>
-                        <picture>
-                            <img src="./images/8.png" alt="">
-                        </picture>
-                    </div>
-
-                    <div class="card-price">
-                        <p>$899</p>
-                        <div class="button">
-                            <button class="radious-left">-</button>
-                            <button>1</button>
-                            <button class="radious-right">+</button>
-                        </div>
-                        <p>$899</p>
-                        <button class="delete"><i class="fa-solid fa-trash"></i></button>
-                    </div>
+                    <p>$1899</p>
+                    <button class="delete"><i class="fa-solid fa-trash"></i></button>
                 </div>
             </div>
+            <div class="card">
+                <div class="card-cart">
+                    <p>鮮緻嫩雞(全齡犬)</p>
+                    <picture>
+                        <img src="./images/8.png" alt="">
+                    </picture>
+                </div>
+
+                <div class="card-price">
+                    <p>$899</p>
+                    <div class="button">
+                        <button class="radious-left">-</button>
+                        <button>1</button>
+                        <button class="radious-right">+</button>
+                    </div>
+                    <p>$899</p>
+                    <button class="delete"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <script>
+        function up() {
+            var product1 = document.getElementById("product1");
+            product1.innerText = parseInt(product1.innerText) + 1;
+            var price = document.getElementById("price");
+            price.innerText = parseInt(price.innerText);
+            var total = document.getElementById("total");
+            total.innerText = price.innerText * product1.innerText
+        }
+        function down() {
+            var product1 = document.getElementById("product1");
+            product1.innerText = parseInt(product1.innerText) - 1;
+            if (product1.innerText < 0) {
+                product1.innerText = 0
+            }
+            var price = document.getElementById("price");
+            price.innerText = parseInt(price.innerText);
+            var total = document.getElementById("total");
+            total.innerText = price.innerText * product1.innerText
+        }
+        function del() {
+            var card1 = document.getElementById("card1")
+            card1.style.display = "none"
+        }
+        document.getElementById("radious-right1").addEventListener("click", up, false)
+        document.getElementById("radious-left1").addEventListener("click", down, false)
+        document.getElementById("delete").addEventListener("click", del, false)
 
+
+
+
+    </script>
 
 
 
