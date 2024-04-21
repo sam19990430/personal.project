@@ -283,23 +283,42 @@ picture {
 }
 
 @media (max-width:767px) {
+/*共用設定*/
     .container{
         max-width: 600px;
     }
     .txt-banner,
     .title-service,
-    .copyright
+    .copyright,
+    .title-news
     {
         width: unset;
         max-width: 500px;
     }
+    .section-banner{
+        height: unset;
+        position: relative;
+    }
+    .container-banner{
+        position: static;
+    }
+    .txt-banner{
+        margin-left: 10%;
+    }
+    .txt-banner h1{
+        font-size: 28px;
+    }
+    .txt-banner h2 {
+        font-size: 24px;
+    }
+    .txt-banner p{
+        font-size: 16px;
+    }
     .pic-banner{
+        width: unset;
         max-width: 200px;
     }
-    .title-news{
-        width: unset;
-        max-width: 500px;
-    }
+
     .card-news{ 
         max-width: 500px;
         margin:auto;
