@@ -281,3 +281,44 @@ picture {
     font-size: 32px;
     font-weight: bold;
 }
+
+@media (max-width:767px) {
+    .container{
+        max-width: 600px;
+    }
+    .txt-banner,
+    .title-service,
+    .copyright
+    {
+        width: unset;
+        max-width: 500px;
+    }
+    .pic-banner{
+        max-width: 200px;
+    }
+    .title-news{
+        width: unset;
+        max-width: 500px;
+    }
+    .card-news{ 
+        max-width: 500px;
+        margin:auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px   ;
+    }
+    .card-news .card {
+        width: unset;
+        max-width: 500px;
+        flex-direction: row;
+    }
+    .houseinfo{
+        flex-direction: column;
+    }
+    .copyright{
+        font-size: 12px;
+        text-align: center;
+    }
+    
+}
