@@ -1,7 +1,8 @@
 * {
     box-sizing: border-box;
-    
+
 }
+
 body {
     font-family: "Noto Sans TC", sans-serif;
     font-optical-sizing: auto;
@@ -9,6 +10,7 @@ body {
     font-style: normal;
     letter-spacing: 1.5px;
 }
+
 section {
     padding: 50px 30px;
     margin: 0 0 60px 0;
@@ -19,6 +21,7 @@ section {
     margin: auto;
     padding: 30px 0;
 }
+
 .menu {
     display: flex;
     justify-content: space-between;
@@ -26,8 +29,9 @@ section {
     padding: 10px 15px 10px 30px;
 
 }
-.menu .logo svg{
-vertical-align: middle;
+
+.menu .logo svg {
+    vertical-align: middle;
 }
 
 nav a {
@@ -42,6 +46,7 @@ nav a {
 nav .bone:hover {
     color: #fa0;
 }
+
 .bone::before {
     display: none;
     content: "";
@@ -55,6 +60,7 @@ nav .bone:hover {
     background-size: contain;
     transform: translateY(-20%);
 }
+
 .bone:hover::before {
     display: block;
 }
@@ -82,7 +88,7 @@ nav .sign {
 }
 
 .txt-banner {
-    margin-left: 20%   ;
+    margin-left: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,7 +99,7 @@ nav .sign {
 
 }
 
-.txt-banner-ch{
+.txt-banner-ch {
     padding-left: 30px;
     text-align: right;
     /* transform: translateX(100px); */
@@ -120,9 +126,10 @@ nav .sign {
 }
 
 
-.container-banner{
+.container-banner {
     position: relative;
 }
+
 .pic-banner {
     position: absolute;
     right: 0;
@@ -133,7 +140,7 @@ nav .sign {
 
 .pic-banner img {
     width: 100%;
-vertical-align: top;
+    vertical-align: top;
 
 }
 
@@ -155,11 +162,12 @@ vertical-align: top;
     line-height: 1.5;
 }
 
-.logo-social{
+.logo-social {
     display: flex;
     flex-direction: column;
     justify-content: center
 }
+
 .logo-social .logo {
     margin: 0 0 15px 0;
 }
@@ -177,18 +185,20 @@ vertical-align: top;
 }
 
 
-.houseinfo ul li{
+.houseinfo ul li {
     padding: 6px 0;
 
 }
 
 .copyright {
+    text-align: center;
     width: 500px;
     height: 100px;
     margin: auto;
     line-height: 100px;
 }
-.contactinfo .icon{
+
+.contactinfo .icon {
     padding: 0 4px;
     display: inline-block;
     width: 20px;
