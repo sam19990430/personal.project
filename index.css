@@ -1,4 +1,3 @@
-
 h2 {
     font-weight: bold;
     font-size: 32px;
@@ -10,9 +9,10 @@ h3 {
     font-size: 20px;
 }
 
-.section-news{
+.section-news {
     padding: 0 30px;
 }
+
 .section-comfortable .container,
 .section-news .container {
     background-image: url(./images/icon\ _Paw_.png);
@@ -22,7 +22,7 @@ h3 {
     background-size: contain;
 }
 
-.section-news .container{
+.section-news .container {
     background-image: url(./images/icon\ _RightPaw_.png);
     background-position-x: 0;
 }
@@ -30,7 +30,7 @@ h3 {
 .card-comfortable {
     display: flex;
     justify-content: center;
-    
+
 }
 
 .pic-card-comfortable {
@@ -57,9 +57,11 @@ h3 {
     padding: 10px;
     gap: 10px;
 }
-.txt-card-comfortable a{
+
+.txt-card-comfortable a {
     transition: .5s;
 }
+
 .txt-card-comfortable a:hover {
     scale: 1.2;
 }
@@ -107,9 +109,11 @@ h3 {
     color: #f4b980;
     margin-bottom: 20px;
 }
-.title-service h2{
+
+.title-service h2 {
     margin-bottom: 20px;
 }
+
 .title-news p {
     font-size: 16px;
 }
@@ -182,7 +186,7 @@ h3 {
     height: 100%;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-position: top ;
+    background-position: top;
 }
 
 .container-choose {
@@ -199,7 +203,7 @@ h3 {
 }
 
 picture {
-    
+
     width: 200px;
     position: absolute;
     top: 50%;
@@ -277,38 +281,157 @@ picture {
 .txt-bottom {
     width: 400px;
 }
-.choose-why p{
+
+.choose-why p {
     font-size: 32px;
     font-weight: bold;
 }
+
 .hb {
     display: none;
-    }
+}
 
 @media (max-width:768px) {
-/*共用設定*/
-    .container{
+
+    /*共用設定*/
+    .container {
         max-width: 600px;
     }
+
     .txt-banner,
     .title-service,
     .copyright,
     .title-news,
     .card-news .card,
     .pic-card-comfortable,
-    .txt-comfortable
-    {
+    .txt-comfortable {
         width: unset;
         max-width: 500px;
     }
+
     .choose-why,
-    .card-service .card{
+    .card-service .card {
         width: unset;
         max-width: 300px;
     }
+
     header {
         position: relative;
     }
+
+
+
+    .section-banner {
+        height: unset;
+        position: relative;
+    }
+
+    .container-banner {
+        position: static;
+    }
+
+    .txt-banner {
+        margin-left: 10%;
+    }
+
+    .txt-banner h1 {
+        font-size: 28px;
+    }
+
+    .txt-banner h2 {
+        font-size: 24px;
+    }
+
+    .txt-banner p {
+        font-size: 16px;
+    }
+
+    .pic-banner {
+        width: unset;
+        max-width: 100px;
+    }
+
+    .card-news {
+        max-width: 500px;
+        margin: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .card-news .card {
+        flex-direction: row;
+    }
+
+    .houseinfo {
+        flex-direction: column;
+    }
+
+    .copyright {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .choose-why {
+        margin-bottom: 30px;
+    }
+
+    .card-news .txt {
+        flex-grow: 0;
+        max-width: 300px;
+        ;
+    }
+
+    .card-service .card .txt p {
+        display: none;
+    }
+
+    .card-service .card .pic {
+        width: unset;
+        max-width: 100px;
+    }
+
+    .card-news .pic {
+        width: unset;
+        max-width: 100px;
+        flex-grow: 1;
+    }
+
+    .choose-txt {
+        flex-direction: column;
+    }
+
+    .number-right,
+    .txt-comfortable-right {
+        text-align: unset;
+    }
+
+    .number {
+        position: static;
+    }
+
+    .number-right {
+        margin-left: unset;
+    }
+
+    .txt-comfortable {
+        /* margin-top: 20px; */
+        padding: 20px 8px;
+    }
+
+    .border-top,
+    .txt-comfortable+.txt-comfortable {
+        border-top: 1px solid #f0f0f0;
+    }
+
+    .pic-choose img {
+        display: none;
+    }
+
+}
+
+@media (max-width:992px) {
     nav {
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
         position: absolute;
@@ -324,108 +447,32 @@ picture {
         padding: 16px;
         border-radius: 0 0 25px 25px;
     }
+
     nav a,
     nav .sign {
         width: 100%;
         margin: auto;
     }
-        nav .bone+.bone{
+
+    nav .bone+.bone {
         border-top: 2px solid #eee;
-        }
-
-    
-    .section-banner{
-        height: unset;
-        position: relative;
-    }
-    .container-banner{
-        position: static;
-    }
-    .txt-banner{
-        margin-left: 10%;
-    }
-    .txt-banner h1{
-        font-size: 28px;
-    }
-    .txt-banner h2 {
-        font-size: 24px;
-    }
-    .txt-banner p{
-        font-size: 16px;
-    }
-    .pic-banner{
-        width: unset;
-        max-width: 100px;
     }
 
-    .card-news{ 
-        max-width: 500px;
-        margin:auto;
+    .hb {
+        display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
-        gap: 30px   ;
-    }
-    .card-news .card {
-        flex-direction: row;
-    }
-    .houseinfo{
-        flex-direction: column;
-    }
-    .copyright{
-        font-size: 12px;
-        text-align: center;
+        width: 50px;
+        height: 50px;
+        background-color: #fa0;
+        border-radius: 5px;
     }
 
-    .choose-why{
-        margin-bottom: 30px;
+    .hb span {
+        width: 80%;
+        height: 2px;
+        border-radius: 5px;
+        background-color: #f0f0f0;
     }
-    .card-service .card  .pic{
-        width: unset;
-        max-width: 100px;
-    }
-    .card-news .pic{
-        width: unset;
-        max-width: 200px;
-    }
-    .choose-txt{
-        flex-direction: column;
-    }
-    .number-right,
-    .txt-comfortable-right{
-        text-align: unset;
-    }
-    .number{
-        position: static;
-    }
-    .number-right{
-        margin-left: unset;
-    }
-    .txt-comfortable{
-        /* margin-top: 20px; */
-        padding: 20px 8px ;
-    }
-    .border-top,
-    .txt-comfortable + .txt-comfortable  {
-        border-top: 1px solid #f0f0f0;
-}
-.pic-choose img {
-    display: none;
-}
-.hb{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    background-color: #fa0;
-    border-radius: 5px;
-}
-.hb span{
-    width: 80%;
-    height: 2px;
-    border-radius: 5px;
-    background-color: #f0f0f0;
-}
 }
