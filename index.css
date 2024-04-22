@@ -282,7 +282,7 @@ picture {
     font-weight: bold;
 }
 
-@media (max-width:767px) {
+@media (max-width:768px) {
 /*共用設定*/
     .container{
         max-width: 600px;
@@ -290,11 +290,47 @@ picture {
     .txt-banner,
     .title-service,
     .copyright,
-    .title-news
+    .title-news,
+    .card-news .card,
+    .pic-card-comfortable,
+    .txt-comfortable
     {
         width: unset;
         max-width: 500px;
     }
+    .choose-why,
+    .card-service .card{
+        width: unset;
+        max-width: 300px;
+    }
+    header {
+        position: relative;
+    }
+    nav {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        display: none;
+        width: 300px;
+        height: 300px;
+        z-index: 2;
+        background-color: #fff;
+        padding: 16px;
+        border-radius: 0 0 25px 25px;
+    }
+    nav a,
+    nav .sign {
+        width: 100%;
+        margin: auto;
+    }
+        nav .bone+.bone{
+        border-top: 2px solid #eee;
+        }
+
+    
     .section-banner{
         height: unset;
         position: relative;
@@ -316,7 +352,7 @@ picture {
     }
     .pic-banner{
         width: unset;
-        max-width: 200px;
+        max-width: 100px;
     }
 
     .card-news{ 
@@ -328,8 +364,6 @@ picture {
         gap: 30px   ;
     }
     .card-news .card {
-        width: unset;
-        max-width: 500px;
         flex-direction: row;
     }
     .houseinfo{
@@ -339,5 +373,56 @@ picture {
         font-size: 12px;
         text-align: center;
     }
-    
+
+    .choose-why{
+        margin-bottom: 30px;
+    }
+    .card-service .card  .pic{
+        width: unset;
+        max-width: 100px;
+    }
+    .card-news .pic{
+        width: unset;
+        max-width: 200px;
+    }
+    .choose-txt{
+        flex-direction: column;
+    }
+    .number-right,
+    .txt-comfortable-right{
+        text-align: unset;
+    }
+    .number{
+        position: static;
+    }
+    .number-right{
+        margin-left: unset;
+    }
+    .txt-comfortable{
+        /* margin-top: 20px; */
+        padding: 20px 8px ;
+    }
+    .border-top,
+    .txt-comfortable + .txt-comfortable  {
+        border-top: 1px solid #f0f0f0;
+}
+.pic-choose img {
+    display: none;
+}
+.hb{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #fa0;
+    border-radius: 5px;
+}
+.hb span{
+    width: 80%;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
 }

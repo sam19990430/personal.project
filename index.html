@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="index.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+
 </head>
 
 <body>
@@ -51,7 +52,7 @@
         </div>
 
 
-        <nav>
+        <nav title="open">
             <a href="about-live.html" class="bone">關於我們</a>
             <a href="supplies.html" class="bone">產品介紹</a>
             <a href="contact.html" class="bone">聯絡我們</a>
@@ -60,9 +61,29 @@
             <a href="login.html" class="sign">登入</a>
 
         </nav>
+        <div class="hb" id="hb">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
     </header>
+    <script>
+        function showNav() {
+            var nav = document.querySelector("nav");
 
+            if (nav.title === "open") {
+                nav.style.display = "flex"
+                nav.title = "close";
+            }
+            else {
+                nav.style.display = "none"
+                nav.title = "open"
+            }
+
+        }
+        document.getElementById("hb").addEventListener("click", showNav, false);
+    </script>
     <section class="section section-banner">
         <div class="container container-banner">
             <div class="txt-banner">
@@ -209,7 +230,7 @@
                     </div>
                 </div>
                 <div class="choose-txt ">
-                    <div class="txt-comfortable txt-comfortable-left txt-bottom">
+                    <div class="txt-comfortable txt-comfortable-left txt-bottom border-top">
                         <div class="number number-left">
                             <p>3</p>
                         </div>
