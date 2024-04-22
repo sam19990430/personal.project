@@ -281,6 +281,9 @@ picture {
     font-size: 32px;
     font-weight: bold;
 }
+.hb {
+    display: none;
+    }
 
 @media (max-width:768px) {
 /*共用設定*/
