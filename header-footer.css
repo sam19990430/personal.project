@@ -65,6 +65,11 @@ nav .bone:hover {
     display: block;
 }
 
+
+.mobile {
+    display: none;
+}
+
 nav .sign {
     display: inline-block;
     color: #fff;

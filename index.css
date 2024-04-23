@@ -291,7 +291,90 @@ picture {
     display: none;
 }
 
+br {
+    display: none;
+}
+
+@media (max-width:992px) {
+    .mobile {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    header {
+        position: relative;
+    }
+
+    nav {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        display: none;
+        width: 80%;
+        height: 100vh;
+        z-index: 2;
+        background-color: #fff;
+        padding: 16px;
+        border-radius: 0 0 25px 25px;
+        gap: 20px;
+
+
+    }
+
+    nav a {
+        width: 100%;
+        margin-right: 0;
+        font-size: 28px;
+        padding: 10px 0;
+        /* margin: auto; */
+
+    }
+
+    nav .bone+.bone {
+        border-top: 2px solid #eee;
+    }
+
+    .hb {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        background-color: #fa0;
+        border-radius: 5px;
+    }
+
+    .hb span {
+        width: 80%;
+        height: 2px;
+        border-radius: 5px;
+        background-color: #f0f0f0;
+    }
+
+    nav .sign {
+        display: none;
+
+    }
+}
+
 @media (max-width:768px) {
+    .houseinfo {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 12px;
+        margin: auto;
+    }
+
+    .houseinfo h3 {
+        margin-bottom: 2px;
+    }
 
     /*共用設定*/
     .container {
@@ -303,21 +386,20 @@ picture {
     .copyright,
     .title-news,
     .card-news .card,
-    .pic-card-comfortable,
-    .txt-comfortable {
+    .txt-comfortable,
+    .txt-card-comfortable {
         width: unset;
         max-width: 500px;
     }
 
     .choose-why,
+    .pic-card-comfortable,
     .card-service .card {
         width: unset;
         max-width: 300px;
     }
 
-    header {
-        position: relative;
-    }
+
 
 
 
@@ -335,10 +417,18 @@ picture {
     }
 
     .txt-banner h1 {
-        font-size: 28px;
+        font-size: 32px;
     }
 
-    .txt-banner h2 {
+    .section-banner h2 {
+        font-size: 28px;
+
+    }
+
+    .txt-banner,
+    .title-news h2,
+    .txt-card-comfortable h2,
+    .title-service h2 {
         font-size: 24px;
     }
 
@@ -348,7 +438,7 @@ picture {
 
     .pic-banner {
         width: unset;
-        max-width: 100px;
+        max-width: 200px;
     }
 
     .card-news {
@@ -364,13 +454,12 @@ picture {
         flex-direction: row;
     }
 
-    .houseinfo {
-        flex-direction: column;
-    }
+
 
     .copyright {
         font-size: 12px;
         text-align: center;
+        padding: 0 4px;
     }
 
     .choose-why {
@@ -429,50 +518,53 @@ picture {
         display: none;
     }
 
+    .card-comfortable {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    br {
+        display: block;
+    }
+
 }
 
-@media (max-width:992px) {
-    nav {
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
-        position: absolute;
-        top: 100%;
-        left: 0;
-        display: flex;
-        flex-direction: column;
+@media(max-width:376px) {
+
+
+    .container-copyright p {
+        font-size: 10px;
+
+    }
+
+    .txt-banner p br {
         display: none;
-        width: 80%;
-        height: 300px;
-        z-index: 2;
-        background-color: #fff;
-        padding: 16px;
-        border-radius: 0 0 25px 25px;
     }
 
-    nav a,
-    nav .sign {
-        width: 100%;
-        margin: auto;
+    br {
+        display: block;
     }
 
-    nav .bone+.bone {
-        border-top: 2px solid #eee;
+    .content {
+        padding-right: 0;
     }
 
-    .hb {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 50px;
-        height: 50px;
-        background-color: #fa0;
-        border-radius: 5px;
+    .card-service .card .pic {
+        width: unset;
+        max-width: 70px;
     }
 
-    .hb span {
-        width: 80%;
-        height: 2px;
-        border-radius: 5px;
-        background-color: #f0f0f0;
+    .card-service .txt h3 {
+        font-size: 16px;
+    }
+
+    .pic-banner {
+        right: -40px;
+        bottom: -150px;
+    }
+
+    .section-comfortable {
+        margin-top: 150px;
     }
 }
