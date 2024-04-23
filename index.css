@@ -365,6 +365,11 @@ br {
 }
 
 @media (max-width:768px) {
+    .more {
+        align-self: unset;
+        text-align: center;
+    }
+
     .houseinfo {
         flex-direction: column;
         gap: 10px;
