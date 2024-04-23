@@ -365,6 +365,7 @@ br {
 }
 
 @media (max-width:768px) {
+
     .more {
         align-self: unset;
         text-align: center;
@@ -538,8 +539,11 @@ br {
 @media (max-width:430px) {
 
     .pic-banner {
-        /* right: -40px; */
-        bottom: -150px;
+        left: 0;
+        top: 100%;
+        transform: translate(25%);
+        width: unset;
+        max-width: 300px;
     }
 
     .txt-banner p {
@@ -547,7 +551,7 @@ br {
     }
 
     .section-comfortable {
-        margin-top: 150px;
+        margin-top: 300px;
     }
 
 
