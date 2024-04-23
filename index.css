@@ -45,6 +45,7 @@ h3 {
 }
 
 .txt-card-comfortable {
+
     width: 50%;
     line-height: 1.8;
     display: flex;
@@ -56,6 +57,10 @@ h3 {
     width: 450px;
     padding: 10px;
     gap: 10px;
+}
+
+.txt-card-comfortable br {
+    display: block;
 }
 
 .txt-card-comfortable a {
@@ -77,7 +82,7 @@ h3 {
 
 .txt-card-comfortable p {
 
-    padding: 10px;
+    padding: 10px auto;
     text-align: left;
 }
 
@@ -366,6 +371,7 @@ br {
 @media (max-width:768px) {
 
     .more {
+        margin-top: 20px;
         align-self: unset;
         text-align: center;
     }
@@ -533,6 +539,9 @@ br {
         display: block;
     }
 
+    .section-comfortable {
+        margin-bottom: 0;
+    }
 }
 
 @media (max-width:430px) {
