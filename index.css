@@ -535,7 +535,15 @@ br {
 
 }
 
-@media(max-width:376px) {
+@media (max-width:430px) {
+
+    .pic-banner {
+        /* right: -40px; */
+        bottom: -150px;
+    }
+}
+
+@media(max-width:375px) {
 
 
     .container-copyright p {
@@ -564,10 +572,7 @@ br {
         font-size: 16px;
     }
 
-    .pic-banner {
-        right: -40px;
-        bottom: -150px;
-    }
+
 
     .section-comfortable {
         margin-top: 150px;
