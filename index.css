@@ -314,7 +314,6 @@ br {
         display: flex;
         align-items: center;
         flex-direction: column;
-        justify-content: center;
         display: none;
         width: 80%;
         height: 100vh;
@@ -551,7 +550,7 @@ br {
     }
 
     .section-comfortable {
-        margin-top: 300px;
+        margin-top: 400px;
     }
 
 
