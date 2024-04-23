@@ -541,6 +541,14 @@ br {
         /* right: -40px; */
         bottom: -150px;
     }
+
+    .txt-banner p {
+        display: none;
+    }
+
+    .section-comfortable {
+        margin-top: 150px;
+    }
 }
 
 @media(max-width:375px) {
@@ -574,7 +582,5 @@ br {
 
 
 
-    .section-comfortable {
-        margin-top: 150px;
-    }
+
 }
