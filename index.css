@@ -549,9 +549,6 @@ br {
     .section-comfortable {
         margin-top: 150px;
     }
-}
-
-@media(max-width:375px) {
 
 
     .container-copyright p {
@@ -579,8 +576,4 @@ br {
     .card-service .txt h3 {
         font-size: 16px;
     }
-
-
-
-
 }
