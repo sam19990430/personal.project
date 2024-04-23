@@ -159,8 +159,8 @@
             cursor: pointer;
         }
 
-        #price::before,
-        #total::before {
+        .pri::before,
+        .tot::before {
             content: "$";
         }
     </style>
@@ -245,13 +245,13 @@
                 </div>
 
                 <div class="card-price">
-                    <p id="price">339</p>
+                    <p id="price" class="pri">339</p>
                     <div class="button">
                         <button class="radious-left" id="radious-left1">-</button>
-                        <button id="product1">1</button>
+                        <button id="product1" class="number">1</button>
                         <button class="radious-right" id="radious-right1">+</button>
                     </div>
-                    <p id="total">339</p>
+                    <p id="total" class="tot">339</p>
                     <button class=" delete" id="delete"><i class="fa-solid fa-trash"></i></button>
                 </div>
             </div>
@@ -264,13 +264,13 @@
                 </div>
 
                 <div class="card-price">
-                    <p class="price">$1599</p>
+                    <p class="pri">1599</p>
                     <div class="button">
                         <button class="radious-left">-</button>
                         <button class="number">1</button>
                         <button class="radious-right">+</button>
                     </div>
-                    <p class="total">$1599</p>
+                    <p class="tot">1599</p>
                     <button class="delete"><i class="fa-solid fa-trash"></i></button>
                 </div>
 
@@ -284,13 +284,13 @@
                 </div>
 
                 <div class="card-price">
-                    <p>$1899</p>
+                    <p class="pri">1899</p>
                     <div class="button">
                         <button class="radious-left">-</button>
-                        <button>1</button>
+                        <button class="number">1</button>
                         <button class="radious-right">+</button>
                     </div>
-                    <p>$1899</p>
+                    <p class="tot">1899</p>
                     <button class="delete"><i class="fa-solid fa-trash"></i></button>
                 </div>
             </div>
@@ -303,13 +303,13 @@
                 </div>
 
                 <div class="card-price">
-                    <p>$899</p>
+                    <p class="pri">899</p>
                     <div class="button">
                         <button class="radious-left">-</button>
-                        <button>1</button>
+                        <button class="number">1</button>
                         <button class="radious-right">+</button>
                     </div>
-                    <p>$899</p>
+                    <p class="tot">899</p>
                     <button class="delete"><i class="fa-solid fa-trash"></i></button>
                 </div>
             </div>
@@ -317,36 +317,78 @@
     </section>
 
     <script>
-        function up() {
-            var product1 = document.getElementById("product1");
-            product1.innerText = parseInt(product1.innerText) + 1;
-            var price = document.getElementById("price");
-            price.innerText = parseInt(price.innerText);
-            var total = document.getElementById("total");
-            total.innerText = price.innerText * product1.innerText
-        }
-        function down() {
-            var product1 = document.getElementById("product1");
-            product1.innerText = parseInt(product1.innerText) - 1;
-            if (product1.innerText < 0) {
-                product1.innerText = 0
+        // function up() {
+        //     var product1 = document.getElementById("product1");
+        //     product1.innerText = parseInt(product1.innerText) + 1;
+        //     var price = document.getElementById("price");
+        //     price.innerText = parseInt(price.innerText);
+        //     var total = document.getElementById("total");
+        //     total.innerText = price.innerText * product1.innerText
+        // }
+        // function down() {
+        //     var product1 = document.getElementById("product1");
+        //     product1.innerText = parseInt(product1.innerText) - 1;
+        //     if (product1.innerText < 0) {
+        //         product1.innerText = 0
+        //     }
+        //     var price = document.getElementById("price");
+        //     price.innerText = parseInt(price.innerText);
+        //     var total = document.getElementById("total");
+        //     total.innerText = price.innerText * product1.innerText
+        // }
+        // function del() {
+        //     var card1 = document.getElementById("card1")
+        //     card1.style.display = "none"
+        // }
+        // document.getElementById("radious-right1").addEventListener("click", up, false)
+        // document.getElementById("radious-left1").addEventListener("click", down, false)
+        // document.getElementById("delete").addEventListener("click", del, false)
+
+        // let radiousRight = document.querySelectorAll(".radious-right")
+        // number.innerText = parseInt(number.innerText);
+
+
+        let add = document.querySelectorAll(".radious-right")
+        for (let i = 0; i < add.length; i++) {
+
+            let number = document.querySelectorAll(".number")
+            let total = document.querySelectorAll(".tot")
+            let price = document.querySelectorAll(".pri")
+            add[i].setAttribute('index', i);
+            add[i].onclick = function () {
+                var index = this.getAttribute('index');
+                number[index].innerText = parseInt(number[index].innerText) + 1;
+                price[index].innerText = parseInt(price[index].innerText);
+                total[index].innerText = number[index].innerText * price[index].innerText;
             }
-            var price = document.getElementById("price");
-            price.innerText = parseInt(price.innerText);
-            var total = document.getElementById("total");
-            total.innerText = price.innerText * product1.innerText
         }
-        function del() {
-            var card1 = document.getElementById("card1")
-            card1.style.display = "none"
+        let decrese = document.querySelectorAll(".radious-left")
+        for (let i = 0; i < decrese.length; i++) {
+
+            let number = document.querySelectorAll(".number")
+            let total = document.querySelectorAll(".tot")
+            let price = document.querySelectorAll(".pri")
+            decrese[i].setAttribute('index', i);
+            decrese[i].onclick = function () {
+                var index = this.getAttribute('index');
+                number[index].innerText = parseInt(number[index].innerText) - 1;
+                if (number[index].innerText < 0) {
+                    number[index].innerText = 0;
+                }
+                price[index].innerText = parseInt(price[index].innerText);
+                total[index].innerText = number[index].innerText * price[index].innerText;
+            }
         }
-        document.getElementById("radious-right1").addEventListener("click", up, false)
-        document.getElementById("radious-left1").addEventListener("click", down, false)
-        document.getElementById("delete").addEventListener("click", del, false)
+        let del = document.querySelectorAll(".delete")
+        for (let i = 0; i < del.length; i++) {
 
-
-
-
+            let card = document.querySelectorAll(".card")
+            del[i].setAttribute('index', i);
+            del[i].onclick = function () {
+                var index = this.getAttribute('index');
+                card[index].style.display = "none";
+            }
+        }
     </script>
 
 
