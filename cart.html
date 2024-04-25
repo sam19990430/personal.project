@@ -12,13 +12,17 @@
     <!--css-->
     <link rel="stylesheet" href="header-footer.css">
     <!--Fontawesome ICON-->
-    <script src="https://kit.fontawesome.com/4ce54b2072.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <!--頁籤LOGO-->
     <link rel="Shortcut Icon" type="image/x-icon" href="./images/icon.ico" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 
     <style>
@@ -67,7 +71,7 @@
 
 
         .title {
-            width: 800px;
+            max-width: 800px;
             margin: auto;
             /* padding: 0 40px 0 120px; */
             height: 100px;
@@ -100,7 +104,7 @@
             align-items: center;
             justify-content: center;
             background-color: #fdf1df;
-            width: 800px;
+            max-width: 800px;
             justify-content: space-around;
             padding: 30px 0;
             border: 1px solid #000000cc;
@@ -163,6 +167,268 @@
         .tot::before {
             content: "$";
         }
+
+
+
+        @media (max-width:992px) {
+            .bone::before {
+                left: 130px;
+                transform: translateY(75%);
+
+            }
+
+            .mobile {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+
+            header {
+                position: relative;
+            }
+
+            nav {
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+                position: absolute;
+                top: 100%;
+                right: 0;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                display: none;
+                width: 80%;
+                height: 100vh;
+                z-index: 2;
+                background-color: #fff;
+                padding: 16px;
+                border-radius: 0 0 25px 25px;
+                gap: 20px;
+
+
+            }
+
+            nav a {
+                width: 100%;
+                margin-right: 0;
+                font-size: 28px;
+                padding: 10px 0;
+                /* margin: auto; */
+
+            }
+
+            nav .bone+.bone {
+                border-top: 2px solid #eee;
+            }
+
+            .hb {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 50px;
+                height: 50px;
+                background-color: #fa0;
+                border-radius: 5px;
+            }
+
+            .hb span {
+                width: 80%;
+                height: 2px;
+                border-radius: 5px;
+                background-color: #f0f0f0;
+            }
+
+            nav .sign {
+                display: none;
+
+            }
+
+            .pic-banner {
+                top: 0;
+                width: 250px;
+                pointer-events: none;
+            }
+        }
+
+        @media (max-width:768px) {
+            .container-title p {
+                font-size: 24px;
+            }
+
+            .houseinfo {
+                flex-direction: column;
+                gap: 10px;
+                font-size: 12px;
+                margin: auto;
+            }
+
+            .houseinfo h3 {
+                margin-bottom: 2px;
+            }
+
+            /*共用設定*/
+            .container {
+                max-width: 600px;
+            }
+
+
+            .copyright {
+                width: unset;
+                max-width: 500px;
+            }
+
+            .section-banner {
+                height: unset;
+                position: relative;
+            }
+
+            .container-banner {
+                position: static;
+            }
+
+            .txt-banner {
+                margin-left: 10%;
+                width: fit-content;
+            }
+
+            .txt-banner-ch {
+                padding-left: 100px;
+            }
+
+            .section-banner h1 {
+                font-size: 32px;
+            }
+
+
+            .txt-banner {
+                font-size: 24px;
+            }
+
+            .txt-banner p {
+                font-size: 16px;
+            }
+
+            .container-banner .pic-banner {
+                width: unset;
+                max-width: 400px;
+                top: 100px;
+            }
+
+            .copyright {
+                font-size: 12px;
+                text-align: center;
+                padding: 0 4px;
+            }
+
+            br {
+                display: block;
+            }
+
+            .card-cart {
+                padding-left: 10px;
+            }
+
+            .card-price {
+                margin-left: 22px;
+            }
+
+
+
+        }
+
+        @media (max-width:430px) {
+            .product {
+                font-size: 14px;
+            }
+
+            .product-info {
+                gap: 24px;
+                font-size: 14px;
+            }
+
+            .product-info .quantity {
+                margin: 0;
+                padding: 0;
+            }
+
+            .title {
+                justify-content: space-between;
+                padding: 0 6px 0 15px;
+            }
+
+            .container-cart .title .product-info .cnt {
+                /* margin-right: 30px; */
+            }
+
+            .title .product p {
+                padding-left: 0;
+            }
+
+            .container-cart {
+                width: unset;
+                max-width: 900px;
+            }
+
+            .product-info {
+                width: unset;
+                max-width: 460px;
+            }
+
+            .title .product p {
+                width: unset;
+                max-width: 218px;
+            }
+
+            .container-products-pic .card .pic {
+                width: 80%;
+            }
+
+            .section-title {
+                margin-top: 150px;
+            }
+
+            .categoryservice .current {
+                width: 30%;
+            }
+
+            .section-banner h1 {
+                font-size: 32px;
+            }
+
+            .container-banner .pic-banner {
+                left: 50%;
+                top: 100%;
+                transform: translate(-50%);
+                width: unset;
+                max-width: 300px;
+            }
+
+
+
+            .container-copyright p {
+                font-size: 10px;
+
+            }
+
+
+            br {
+                display: block;
+            }
+
+            .container-products-pic .card {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card-info div {
+                margin-top: 20px;
+            }
+        }
+
+        .mobile a {
+            text-decoration: none;
+            color: #000000cc;
+        }
     </style>
 </head>
 
@@ -186,8 +452,7 @@
 
         </div>
 
-
-        <nav>
+        <nav title="open">
             <a href="about-live.html" class="bone">關於我們</a>
             <a href="supplies.html" class="bone">產品介紹</a>
             <a href="contact.html" class="bone">聯絡我們</a>
@@ -196,6 +461,35 @@
             <a href="login.html" class="sign">登入</a>
 
         </nav>
+        <div class="mobile">
+            <a href="login.html" class="log"><span class="material-symbols-outlined">
+                    person
+                </span></a>
+            <a href="cart.html" class="cart"><span class="material-symbols-outlined">
+                    shopping_cart
+                </span></a>
+            <div class="hb" id="hb">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <script>
+            function showNav() {
+                var nav = document.querySelector("nav");
+
+                if (nav.title === "open") {
+                    nav.style.display = "flex"
+                    nav.title = "close";
+                }
+                else {
+                    nav.style.display = "none"
+                    nav.title = "open"
+                }
+
+            }
+            document.getElementById("hb").addEventListener("click", showNav, false);
+        </script>
 
     </header>
 
@@ -230,18 +524,19 @@
                 <div class="product-info">
                     <p class="price">單價</p>
                     <p class="quantity">數量</p>
-                    <p>小計</p>
-                    <p>操作</p>
+                    <p class="cnt">小計</p>
+                    <p class="del">操作</p>
 
                 </div>
             </div>
 
             <div class="card" id="card1">
                 <div class="card-cart">
-                    <p>口袋毛領背心</p>
                     <picture>
                         <img src="./images/口袋背心.png" alt="">
                     </picture>
+                    <p>口袋毛領</p>
+                    <p>背心</p>
                 </div>
 
                 <div class="card-price">
@@ -257,10 +552,11 @@
             </div>
             <div class="card">
                 <div class="card-cart">
-                    <p>太空艙兩用提籃S</p>
                     <picture>
                         <img src="./images/太空艙.png" alt="">
                     </picture>
+                    <p>太空艙兩用</p>
+                    <p>提籃S</p>
                 </div>
 
                 <div class="card-price">
@@ -277,10 +573,11 @@
             </div>
             <div class="card">
                 <div class="card-cart">
-                    <p>成犬羊肉+米(骨骼)</p>
                     <picture>
                         <img src="./images/4.png" alt="">
                     </picture>
+                    <p>成犬羊肉+米</p>
+                    <p>(骨骼)</p>
                 </div>
 
                 <div class="card-price">
@@ -296,10 +593,11 @@
             </div>
             <div class="card">
                 <div class="card-cart">
-                    <p>鮮緻嫩雞(全齡犬)</p>
                     <picture>
                         <img src="./images/8.png" alt="">
                     </picture>
+                    <p>鮮緻嫩雞</p>
+                    <p>(全齡犬)</p>
                 </div>
 
                 <div class="card-price">

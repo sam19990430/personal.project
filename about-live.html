@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="header-footer.css">
     <link rel="stylesheet" href="about.css">
     <!--Fontawesome ICON-->
-    <script src="https://kit.fontawesome.com/4ce54b2072.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <!--頁籤LOGO-->
     <link rel="Shortcut Icon" type="image/x-icon" href="./images/icon.ico" />
 
@@ -21,14 +23,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
         .section-banner {
             height: unset;
         }
 
-        .txt-banner {
-            width: 300px;
-        }
+
 
         .section-banner h1 {
             font-size: 36px;
@@ -36,7 +38,6 @@
 
         .pic-banner {
             top: 0;
-            /* transform: translateY(35%); */
             width: 250px;
             pointer-events: none;
         }
@@ -70,6 +71,17 @@
         .section-service {
             padding-top: 0;
         }
+
+        @media (max-width: 768px) {
+            .section-service {
+                padding-top: 50px;
+            }
+        }
+
+        .mobile a {
+            text-decoration: none;
+            color: #000000cc;
+        }
     </style>
 
 </head>
@@ -100,7 +112,7 @@
         </div>
 
 
-        <nav>
+        <nav title="open">
             <a href="about-live.html" class="bone">關於我們</a>
             <a href="supplies.html" class="bone">產品介紹</a>
             <a href="contact.html" class="bone">聯絡我們</a>
@@ -109,6 +121,35 @@
             <a href="login.html" class="sign">登入</a>
 
         </nav>
+        <div class="mobile">
+            <a href="login.html" class="log"><span class="material-symbols-outlined">
+                    person
+                </span></a>
+            <a href="cart.html" class="cart"><span class="material-symbols-outlined">
+                    shopping_cart
+                </span></a>
+            <div class="hb" id="hb">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <script>
+            function showNav() {
+                var nav = document.querySelector("nav");
+
+                if (nav.title === "open") {
+                    nav.style.display = "flex"
+                    nav.title = "close";
+                }
+                else {
+                    nav.style.display = "none"
+                    nav.title = "open"
+                }
+
+            }
+            document.getElementById("hb").addEventListener("click", showNav, false);
+        </script>
 
     </header>
 
@@ -145,14 +186,19 @@
                 </div>
                 <div class="txt">
                     <h2>關於我們</h2>
-                    <p>我們狗狗旅館的起源源於我對寵物及其主人的愛和關懷。作為一個寵物愛好者和業餘寵物照顧者，我意識到當主人們需要旅行或有其他事務需要專注時，他們需要一個可信賴且安全的地方照顧他們的寵物。因此，我開始了對狗狗旅館的構想，希望提供一個讓主人們放心的住宿選擇，同時讓寵物在我們的照顧下感受到家的溫暖和關愛。
+                    <p class="m-txt">我們狗狗旅館希望提供一個讓主人們放心的住宿選擇，同時讓寵物在我們的照顧下感受到家的溫暖和關愛。</p>
+                    <p class="d-txt">
+                        我們狗狗旅館的起源源於我對寵物及其主人的愛和關懷。作為一個寵物愛好者和業餘寵物照顧者，我意識到當主人們需要旅行或有其他事務需要專注時，他們需要一個可信賴且安全的地方照顧他們的寵物。因此，我開始了對狗狗旅館的構想，希望提供一個讓主人們放心的住宿選擇，同時讓寵物在我們的照顧下感受到家的溫暖和關愛。
                     </p>
                 </div>
             </div>
             <div class="card-about">
                 <div class="txt">
-
-                    <p>我們的旅館源於對寵物和主人的熱愛，並堅持著提供最優質的照顧和服務的理念。通過不懈的努力和對細節的關注，我們逐漸建立起了一個以客戶滿意度為核心的寵物住宿業務，並與越來越多的寵物主人建立了長期穩固的合作關係。我們將來自寵物主人的信任視為最寶貴的財富，並將繼續努力維護這份信任，為每一位客戶提供最好的服務和照顧。
+                    <p class="m-txt">
+                        我們將主人的信任視為最寶貴的財富並將繼續努力維護這份信任，為每一位客戶提供最好的服務和照顧。
+                    </p>
+                    <p class="d-txt">
+                        我們的旅館源於對寵物和主人的熱愛，並堅持著提供最優質的照顧和服務的理念。通過不懈的努力和對細節的關注，我們逐漸建立起了一個以客戶滿意度為核心的寵物住宿業務，並與越來越多的寵物主人建立了長期穩固的合作關係。我們將來自寵物主人的信任視為最寶貴的財富，並將繼續努力維護這份信任，為每一位客戶提供最好的服務和照顧。
                     </p>
                 </div>
                 <div class="pic">

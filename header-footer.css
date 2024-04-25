@@ -23,10 +23,15 @@ section {
 }
 
 .menu {
+    background-color: #fff;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px 10px 30px;
+    position: sticky;
+    top: 0;
+    left: 0;
 
 }
 
