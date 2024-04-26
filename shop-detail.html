@@ -136,7 +136,10 @@
 
         .price {
             font-size: 30px;
+            align-self: flex-end;
             margin-left: 50px;
+            margin-right: 30px;
+
         }
 
         .color button {
@@ -215,6 +218,10 @@
         a {
             text-decoration: none;
             color: #000000cc;
+        }
+
+        .cart button {
+            color: #f0f0f0;
         }
 
         @media (max-width:992px) {
@@ -298,6 +305,11 @@
         }
 
         @media (max-width:768px) {
+            .price {
+                align-self: flex-end;
+                margin-right: 30px;
+            }
+
             .houseinfo {
                 flex-direction: column;
                 gap: 10px;
@@ -374,6 +386,11 @@
         }
 
         @media (max-width:430px) {
+            .price {
+                align-self: flex-end;
+                margin-right: 30px;
+            }
+
             .container-products-pic .card .pic {
                 width: 80%;
             }
@@ -417,6 +434,46 @@
 
             .card-info div {
                 margin-top: 20px;
+                display: flex;
+            }
+        }
+
+        @media(max-width:376px) {
+            .cart {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                max-width: 300px;
+            }
+
+            .container-products-pic .card .txt,
+            .price,
+            .color,
+            .quantity,
+            .cart {
+                margin-left: 0;
+            }
+
+
+
+            .card-info {
+                /* text-align: center; */
+                padding: 0;
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            .container-products-pic .card .txt h2 {
+                font-size: 18px;
+            }
+
+
+
+            .cart button {
+                width: unset;
+                width: 100px;
+                margin: 0 10px;
+
             }
         }
 
@@ -522,9 +579,7 @@
                     <div class="txt">
                         <h2>商品名稱 : 口袋毛領背心</h2>
                     </div>
-                    <div class="price">
-                        <p>$ 339</p>
-                    </div>
+
                     <div class="color">
                         <p>顏色 : </p>
                         <button>棕</button>
@@ -539,6 +594,9 @@
                     <div class="cart">
                         <button>加入購物車</button>
                         <button>直接購買</button>
+                    </div>
+                    <div class="price">
+                        <p>$ 339</p>
                     </div>
                 </div>
 
