@@ -7,6 +7,8 @@
     color: #000000cc;
 }
 
+
+
 body {
     font-family: "Noto Sans TC", sans-serif;
     font-optical-sizing: auto;
@@ -220,4 +222,10 @@ nav .sign {
 
 .container-copyright {
     padding: 0;
+}
+
+@media (max-width:992px) {
+    .menu .logo svg {
+        width: 60%;
+    }
 }
