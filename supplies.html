@@ -158,11 +158,13 @@
                 var nav = document.querySelector("nav");
 
                 if (nav.title === "open") {
-                    nav.style.display = "flex"
+                    nav.style.left = "0"
+                    nav.style.transition = "1.5s"
+
                     nav.title = "close";
                 }
                 else {
-                    nav.style.display = "none"
+                    nav.style.left = "-100%"
                     nav.title = "open"
                 }
 

@@ -168,6 +168,9 @@
             content: "$";
         }
 
+        .name {
+            display: none;
+        }
 
 
         @media (max-width:992px) {
@@ -191,11 +194,10 @@
                 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
                 position: absolute;
                 top: 100%;
-                right: 0;
+                left: -100%;
                 display: flex;
                 align-items: center;
                 flex-direction: column;
-                display: none;
                 width: 80%;
                 height: 100vh;
                 z-index: 2;
@@ -337,6 +339,48 @@
         }
 
         @media (max-width:430px) {
+            .button {
+                align-items: center;
+
+            }
+
+            .card-price {
+                padding-right: 8px;
+                font-size: 12px;
+            }
+
+            .delete {
+                text-align: right;
+                /* width: 120px; */
+            }
+
+            .name {
+                display: flex;
+            }
+
+            .name::before {
+                content: "品名 :";
+                margin-right: 2px;
+            }
+
+            .pri::before {
+                content: "單價 :";
+                margin-right: 2px;
+            }
+
+            .button::before {
+                content: "數量 :";
+                margin-right: 2px;
+            }
+
+            .tot::before {
+                content: "$";
+            }
+
+            .card-cart p {
+                display: none;
+            }
+
             .product {
                 font-size: 14px;
             }
@@ -352,11 +396,15 @@
             }
 
             .title {
-                justify-content: space-between;
-                padding: 0 6px 0 15px;
+                display: none;
             }
 
-
+            .card-price {
+                width: 60%;
+                flex-direction: column;
+                gap: 20px;
+                align-items: unset;
+            }
 
             .title .product p {
                 padding-left: 0;
@@ -477,11 +525,13 @@
                 var nav = document.querySelector("nav");
 
                 if (nav.title === "open") {
-                    nav.style.display = "flex"
+                    nav.style.left = "0"
+                    nav.style.transition = "1.5s"
+
                     nav.title = "close";
                 }
                 else {
-                    nav.style.display = "none"
+                    nav.style.left = "-100%"
                     nav.title = "open"
                 }
 
@@ -538,6 +588,7 @@
                 </div>
 
                 <div class="card-price">
+                    <p class="name">口袋毛領背心</p>
                     <p id="price" class="pri">339</p>
                     <div class="button">
                         <button class="radious-left" id="radious-left1">-</button>
@@ -558,6 +609,7 @@
                 </div>
 
                 <div class="card-price">
+                    <p class="name">外出兩用提籃</p>
                     <p class="pri">1599</p>
                     <div class="button">
                         <button class="radious-left">-</button>
@@ -579,6 +631,7 @@
                 </div>
 
                 <div class="card-price">
+                    <p class="name">成犬羊肉+米</p>
                     <p class="pri">1899</p>
                     <div class="button">
                         <button class="radious-left">-</button>
@@ -599,6 +652,7 @@
                 </div>
 
                 <div class="card-price">
+                    <p class="name">鮮緻嫩雞</p>
                     <p class="pri">899</p>
                     <div class="button">
                         <button class="radious-left">-</button>
