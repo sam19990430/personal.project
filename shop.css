@@ -67,20 +67,12 @@
     align-items: center;
 }
 
-.container-quantity .left {
-    border-radius: 25px 0 0 25px;
-    color: #000000cc;
 
-}
-
-.container-quantity .right {
-    border-radius: 0 25px 25px 0;
-}
 
 .container-quantity button {
-    width: 50px;
-    height: 50px;
-    border: 1px solid #000000cc;
+    width: 30px;
+    height: 30px;
+    border: none;
     background-color: #fff;
 }
 
