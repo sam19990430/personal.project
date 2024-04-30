@@ -177,6 +177,32 @@
             display: none;
         }
 
+        .trashcan {
+            align-items: center;
+            display: flex;
+            gap: 65px;
+        }
+
+        .fa-trash {
+            font-size: 16px;
+        }
+
+        .tot {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .bill {
+            margin: auto;
+            max-width: 400px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 25px;
+            background-color: #f4b960;
+            text-align: center;
+            color: #fff;
+            cursor: pointer;
+        }
 
         @media (max-width:992px) {
             .bone::before {
@@ -258,6 +284,11 @@
         }
 
         @media (max-width:768px) {
+            .trashcan {
+                gap: 50px;
+
+            }
+
             .container-title p {
                 font-size: 24px;
             }
@@ -341,9 +372,24 @@
 
 
 
+
         }
 
         @media (max-width:430px) {
+            .bill {
+                max-width: 200px;
+            }
+
+            .trashcan {
+                /* padding: 0 5px; */
+                justify-content: space-between;
+
+            }
+
+            button {
+                width: 22%;
+            }
+
             .button {
                 align-items: center;
 
@@ -602,8 +648,10 @@
                         <button id="product1" class="number">1</button>
                         <button class="radious-right" id="radious-right1">+</button>
                     </div>
-                    <p id="total" class="tot">339</p>
-                    <button class=" delete" id="delete"><i class="fa-solid fa-trash"></i></button>
+                    <div class="trashcan">
+                        <p id="total" class="tot">339</p>
+                        <button class=" delete" id="delete"><i class="fa-solid fa-trash"></i></button>
+                    </div>
                 </div>
             </div>
             <div class="card">
@@ -623,8 +671,10 @@
                         <button class="number">1</button>
                         <button class="radious-right">+</button>
                     </div>
-                    <p class="tot">1599</p>
-                    <button class="delete"><i class="fa-solid fa-trash"></i></button>
+                    <div class="trashcan">
+                        <p class="tot">1599</p>
+                        <button class="delete"><i class="fa-solid fa-trash"></i></button>
+                    </div>
                 </div>
 
             </div>
@@ -645,8 +695,10 @@
                         <button class="number">1</button>
                         <button class="radious-right">+</button>
                     </div>
-                    <p class="tot">1899</p>
-                    <button class="delete"><i class="fa-solid fa-trash"></i></button>
+                    <div class="trashcan">
+                        <p class="tot">1899</p>
+                        <button class="delete"><i class="fa-solid fa-trash"></i></button>
+                    </div>
                 </div>
             </div>
             <div class="card">
@@ -666,11 +718,14 @@
                         <button class="number">1</button>
                         <button class="radious-right">+</button>
                     </div>
-                    <p class="tot">899</p>
-                    <button class="delete"><i class="fa-solid fa-trash"></i></button>
+                    <div class="trashcan">
+                        <p class="tot">899</p>
+                        <button class="delete"><i class="fa-solid fa-trash"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="bill">結帳</div>
     </section>
 
     <script>
@@ -743,7 +798,13 @@
             del[i].setAttribute('index', i);
             del[i].onclick = function () {
                 var index = this.getAttribute('index');
-                card[index].style.display = "none";
+                var yes = confirm('確定刪除 ?')
+                if (yes) {
+                    card[index].style.display = "none";
+                } else {
+                    card[index].style.display = "flex";
+                }
+
             }
         }
     </script>
