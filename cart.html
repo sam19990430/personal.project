@@ -792,9 +792,10 @@
 
             let card = document.querySelectorAll(".card")
             del[i].setAttribute('index', i);
-            del[i].onclick = function () {
+            del[i].onclick = function (e) {
                 var index = this.getAttribute('index');
                 var yes = confirm('確定刪除 ?')
+                e.preventDefault()
                 if (yes) {
                     card[index].style.display = "none";
                 } else {
