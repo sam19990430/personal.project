@@ -8,10 +8,16 @@ $(function () {
         let window_height = $(window).height() // 665
         let document_height = $(document).height() // 2016
 
-        if (scroll_top > document_height - window_height - 150) {
-            $('#top').show()
+        if (scroll_top > 0) {
+            $('#top').css({
+                opacity: 1,
+                transition: '1s',
+            })
         } else {
-            $('#top').hide()
+            $('#top').css({
+                opacity: 0,
+                transition: '0.5s'
+            })
         }
     })
 })
