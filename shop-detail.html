@@ -135,6 +135,8 @@
         }
 
         .price {
+            color: #f4a52e;
+            font-weight: bold;
             font-size: 30px;
             align-self: flex-end;
             margin-left: 50px;
@@ -588,16 +590,16 @@
                     </div>
                     <div class="quantity">
                         <p>數量 : </p>
-                        <button>-</button>
-                        <button>1</button>
-                        <button>+</button>
+                        <button id="minus">-</button>
+                        <button id="number">1</button>
+                        <button id="plus">+</button>
                     </div>
                     <div class="cart">
                         <button>加入購物車</button>
                         <button>直接購買</button>
                     </div>
-                    <div class="price">
-                        <p>$ 339</p>
+                    <div class="price" data-price="339">
+                        <p>$339</p>
                     </div>
                 </div>
 
@@ -606,6 +608,35 @@
         </div>
     </section>
 
+    <script>
+        let plus = document.getElementById('plus') // 按鈕 + 
+        let minus = document.getElementById('minus') // 按鈕 -
+        let number = document.getElementById("number").innerText; // 按鈕數字
+        plus.addEventListener('click', up) // 點擊 +
+        minus.addEventListener('click', down) // 點擊 -
+
+        function up() {
+            number = parseInt(number) + 1;
+            document.getElementById("number").innerText = number
+            let price = document.querySelector('.price')
+            let total = 0
+            total = number * +price.dataset.price
+            price.innerText = "$" + total
+
+        }
+        function down() {
+            number = parseInt(number) - 1;
+            if (number < 0) {
+                number = 0
+            }
+            document.getElementById("number").innerText = number
+
+            let price = document.querySelector('.price')
+            let total = 0
+            total = number * +price.dataset.price
+            price.innerText = "$" + total
+        }
+    </script>
 
     <section class="section section-other">
         <div class="maybe">
