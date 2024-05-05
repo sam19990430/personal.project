@@ -8,7 +8,7 @@ $(function () {
         let window_height = $(window).height() // 665
         let document_height = $(document).height() // 2016
 
-        if (scroll_top === document_height - window_height) {
+        if (scroll_top > document_height - window_height - 20) {
             $('#top').show()
         } else {
             $('#top').hide()
