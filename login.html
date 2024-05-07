@@ -462,22 +462,44 @@
             </div>
         </div>
         <script>
-            function showNav() {
-                var nav = document.querySelector("nav");
+            let hb = document.getElementById("hb")
 
+
+            var nav = document.querySelector("nav");
+
+
+            function showNav() {
                 if (nav.title === "open") {
                     nav.style.left = "0"
                     nav.style.transition = "1s"
+                    nav.title = "close"
+                    $('section').css('opacity', '0.5')
 
-                    nav.title = "close";
-                }
-                else {
+                } else {
                     nav.style.left = "-100%"
                     nav.title = "open"
+                    $('section').css('opacity', '1')
+
                 }
 
             }
-            document.getElementById("hb").addEventListener("click", showNav, false);
+
+
+            // document.addEventListener('click', function (event) {
+
+            //     var target = event.target;
+
+            //     // 如果點擊的不是漢堡或式選單內容，則隱藏選單
+            //     if (target !== hb) {
+            //         nav.style.left = "-100%"
+            //         nav.title = "open"
+            //         $('section').css('opacity', '1')
+
+            //     }
+            // }, true);
+
+            hb.addEventListener("click", showNav, false);
+
         </script>
 
     </header>
