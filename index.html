@@ -53,7 +53,13 @@
         }
     </style>
     <script>
+        // 網頁載入完成後執行 (含所有圖像等等)，移除遮罩，因目前網頁東西太少，所以加上一個1秒的timeOut
+        // $(window).on('load', function () {
+        //     $(".loading-wrapper").fadeOut(1500);
+        // })
+        // 網頁 DOM 載入完成後執行 (不含圖像等等)
         $(document).ready(function () {
+            // 1 秒後執行，fadeOut持續時間 1.5 秒
             setTimeout(function () {
                 $(".loading-wrapper").fadeOut(1500);
             }, 1000)
@@ -123,20 +129,25 @@
 
     </header>
     <script>
+        // 與 html 漢堡 產生關聯 : (hb)
         let hb = document.getElementById("hb")
 
+        // 與 html 選單 產生關聯 : (nav)
 
         var nav = document.querySelector("nav");
 
 
         function showNav() {
+            // 點選漢堡 (hb) 後，顯示選單 (nav)
+
             if (nav.title === "open") {
                 nav.style.left = "0"
                 nav.style.transition = "1s"
                 nav.title = "close"
                 $('section').css('opacity', '0.5')
-
-            } else {
+            }
+            // 點選漢堡 (hb) 後，收起選單 (nav)
+            else {
                 nav.style.left = "-100%"
                 nav.title = "open"
                 $('section').css('opacity', '1')
@@ -150,7 +161,7 @@
 
         //     var target = event.target;
 
-        //     // 如果點擊的不是漢堡或式選單內容，則隱藏選單
+        //     // 如果點擊的不是漢堡 (hb)，則隱藏選單
         //     if (target !== hb) {
         //         nav.style.left = "-100%"
         //         nav.title = "open"
