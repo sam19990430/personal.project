@@ -29,9 +29,47 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./toTOP.css">
     <script src="./toTop.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/bouncy.js"></script>
+
+    <style>
+        /* 遮罩 */
+        .loading-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #efefef;
+            z-index: 3;
+        }
+
+
+        /* loading動畫 */
+        .loading {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transition: -50% -50%;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+                $(".loading-wrapper").fadeOut(1500);
+            }, 1500)
+        })
+    </script>
 </head>
 
 <body>
+    <!-- // Default values shown -->
+    <div class="loading-wrapper">
+        <l-bouncy size="45" speed="1.75" color="#f4a52e" class="loading"></l-bouncy>
+    </div>
+
+
+
+
     <button class="top" id="top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
@@ -90,7 +128,7 @@
 
             if (nav.title === "open") {
                 nav.style.left = "0"
-                nav.style.transition = "1.5s"
+                nav.style.transition = "1s"
 
                 nav.title = "close";
             }
@@ -336,6 +374,7 @@
             </div>
         </div>
     </footer>
+
 
 </body>
 
