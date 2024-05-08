@@ -523,13 +523,53 @@
             text-decoration: none;
             color: #000000cc;
         }
+
+        /* 遮罩 */
+        .loading-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 3;
+        }
+
+
+        /* loading動畫 */
+        .loading {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
     </style>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/bouncy.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./toTOP.css">
     <script src="./toTop.js"></script>
+    <script>
+        // 網頁載入完成後執行 (含所有圖像等等)，移除遮罩，因目前網頁東西太少，所以加上一個1秒的timeOut
+        $(window).on('load', function () {
+            $(".loading-wrapper").fadeOut(1500);
+        })
+        // 網頁 DOM 載入完成後執行 (不含圖像等等)
+        // $(document).ready(function () {
+        //     // 1 秒後執行，fadeOut持續時間 1.5 秒
+        //     setTimeout(function () {
+        //         $(".loading-wrapper").fadeOut(1500);
+        //     }, 1000)
+        // })
+    </script>
 </head>
 
 <body>
+
+    <!-- // Default values shown -->
+    <div class="loading-wrapper">
+        <l-bouncy size="45" speed="1.75" color="#f4a52e" class="loading"></l-bouncy>
+    </div>
     <button class="top" id="top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
